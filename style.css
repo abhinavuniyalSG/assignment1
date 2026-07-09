@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    margin: 0;
+    font-family: "Popins", sans-serif;
+    background-color: #FCEFEF;
+    
+}
+
+header{
+    display: flex;
+   align-items:  center;
+   margin-bottom: 100px;
+   background-color: white;
+  
+}
+main{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 8px;
+    padding: 25px;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+
+
+.wrapper{
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* header */
+header div:nth-child(2){
+    padding: 1rem;
+}
+header div:nth-child(2) p,h1{
+    margin: 0;
+
+}
+.header-icon{
+    padding: 10px;
+    padding-right: 0px;
+}
+.header-icon img{
+    width: 45px;
+    height: 45px;
+    border:solid 2px rgb(107, 107, 198);
+    border-radius: 10px;
+}
+
+
+
+/* card */
+.card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    box-shadow: 1px 1px 2px lightgray;
+    border-radius: 12px;
+}
+.card-image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border:solid 2px #FCEFEF;
+}
+.card-body h2,p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.card-body h2{
+    font-size:20px;
+}
+.role{
+    font-size: 16px;
+    color :rgb(107, 107, 198)
+}
+.card-body p{
+    font-size:  16px;
+
+}
+
+.card-social{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-social a{
+    padding: 10px;
+    border-radius: 8px;
+    border: solid 1px lightgray ;
+}
+.card-social a img{
+    width:20px;
+    height: 20px;
+}
+
+
+
+@media (max-width:875px) {
+    main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr)  ;
+    gap: 8px;
+    }
+    
+}
+
+@media (max-width:630px) {
+    main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 8px;
+    }
+    
+}
+@media (max-width:430px) {
+    main{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    }
+    
+}
