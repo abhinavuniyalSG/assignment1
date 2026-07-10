@@ -25,8 +25,18 @@ main{
     height: calc(100vh - 87px);
     overflow-y: auto;
 }
+main .card:nth-child(even) .card-image img{
+    background-color: #b6b6fb;
 
+}
+main .card:nth-child(odd) .card-image img{
+    background-color: #f6d6d6;
 
+}
+main .card:nth-child(3n) .card-image img{
+    background-color: #ffff86;
+
+}
 
 .wrapper{
     margin: auto;
@@ -41,17 +51,15 @@ header div:nth-child(2){
 }
 header div:nth-child(2) p,h1{
     margin: 0;
-
 }
 .header-icon{
-    padding: 10px;
-    padding-right: 0px;
+    padding: 8px;
+    background-color: rgb(107, 107, 198);
+    border-radius: 10px;
 }
 .header-icon img{
-    width: 45px;
-    height: 45px;
-    border:solid 2px rgb(107, 107, 198);
-    border-radius: 10px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -67,6 +75,30 @@ header div:nth-child(2) p,h1{
     padding: 16px;
     border: 1px solid #ddd;
     border-radius: 12px;
+    position: relative;
+    transition: transform  0.5s ease-in-out;
+}
+.card:hover{
+    transform: scale(0.97);
+    
+    
+}
+
+.card-icon{
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.card-icon:hover{
+    cursor: pointer;
+}
+.seperator{
+    border: solid 1px #b1b1f8;
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 1px;
 }
 .card-image img{
     width: 100px;
@@ -75,11 +107,16 @@ header div:nth-child(2) p,h1{
     border:solid 2px #FCEFEF;
 }
 .card-body h2,p{
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 3px;
+    margin-top: 0px;
 }
 .card-body h2{
     font-size:20px;
+}
+.card-body p:nth-of-type(2){
+    color: #939393;
+    font-size: 12px;
+    margin-top: 8px;
 }
 .card-body .role{
     font-size: 14px !important;
@@ -96,7 +133,7 @@ header div:nth-child(2) p,h1{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .card-social a{
     padding: 10px;
@@ -107,6 +144,9 @@ header div:nth-child(2) p,h1{
     display: inline-flex;
     text-align: center;
     justify-content: center;
+}
+.card-social a:hover{
+    border: solid 1px #b1b1f8;
 }
 .card-social a img{
     width:20px;
