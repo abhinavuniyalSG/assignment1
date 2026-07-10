@@ -7,8 +7,7 @@
 body{
     margin: 0;
     font-family: "Popins", sans-serif;
-    background-color: #FCEFEF;
-    
+    background-color: #f4f2f2;
 }
 
 header{
@@ -23,7 +22,7 @@ main{
     grid-template-columns:repeat(4,1fr);
     gap: 8px;
     padding: 25px;
-    height: 80vh;
+    height: calc(100vh - 87px);
     overflow-y: auto;
 }
 
@@ -66,7 +65,7 @@ header div:nth-child(2) p,h1{
     align-items: center;
     text-align: center;
     padding: 16px;
-    box-shadow: 1px 1px 2px lightgray;
+    border: 1px solid #ddd;
     border-radius: 12px;
 }
 .card-image img{
@@ -82,10 +81,10 @@ header div:nth-child(2) p,h1{
 .card-body h2{
     font-size:20px;
 }
-.role{
-    font-size: 16px;
+.card-body .role{
+    font-size: 14px !important;
     font-weight: 600;
-    color :rgb(107, 107, 198)
+    color: #6767c5;
 }
 .card-body p{
     font-size:  16px;
@@ -97,11 +96,17 @@ header div:nth-child(2) p,h1{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 20px;
 }
 .card-social a{
     padding: 10px;
     border-radius: 8px;
-    border: solid 1px lightgray ;
+    border: solid 1px lightgray;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
 }
 .card-social a img{
     width:20px;
