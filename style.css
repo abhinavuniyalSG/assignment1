@@ -12,28 +12,34 @@ body{
 
 header{
     display: flex;
-   align-items:  center;
-   margin-bottom: 100px;
-   background-color: white;
+    align-items:  center;
+    margin-bottom: 100px;
+    background-color: white;
   
 }
 main{
+    height: calc(100vh - 90px);
+    overflow: hidden;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+.card-container{
     display: grid;
     grid-template-columns:repeat(4,1fr);
     gap: 24px;
-    padding: 25px;
-    height: calc(100vh - 87px);
+    padding: 2.5%;
+    height: 100%;
     overflow-y: auto;
 }
-main .card:nth-child(even) .card-image img{
+.card-container .card:nth-child(even) .card-image img{
     background-color: #b6b6fb;
 
 }
-main .card:nth-child(odd) .card-image img{
+.card-container .card:nth-child(odd) .card-image img{
     background-color: #f6d6d6;
 
 }
-main .card:nth-child(3n) .card-image img{
+.card-container .card:nth-child(3n) .card-image img{
     background-color: #ffff86;
 
 }
@@ -61,8 +67,6 @@ header div:nth-child(2) p, header div:nth-child(2) h1{
     width: 40px;
     height: 40px;
 }
-
-
 
 /* card */
 .card{
@@ -116,7 +120,7 @@ header div:nth-child(2) p, header div:nth-child(2) h1{
 .card-body p:nth-of-type(2){
     color: #939393;
     font-size: 12px;
-    margin-top: 8px;
+    margin-top: 20px;
 }
 .card-body .role{
     font-size: 14px !important;
@@ -157,7 +161,7 @@ header div:nth-child(2) p, header div:nth-child(2) h1{
 
 
 @media (max-width:875px) {
-    main{
+    .card-container{
     display: grid;
     grid-template-columns: repeat(3,1fr)  ;
     gap: 8px;
@@ -166,7 +170,7 @@ header div:nth-child(2) p, header div:nth-child(2) h1{
 }
 
 @media (max-width:630px) {
-    main{
+    .card-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 8px;
@@ -174,7 +178,7 @@ header div:nth-child(2) p, header div:nth-child(2) h1{
     
 }
 @media (max-width:430px) {
-    main{
+    .card-container{
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
